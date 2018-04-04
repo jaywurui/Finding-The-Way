@@ -2,35 +2,35 @@
   "nodes": [
     {
       "name": "Home",
-      "position": "pictures/Home-02.png"
+      "position": "Pictures/Home-02.png"
     },
     {
       "name": "School",
-      "position": "pictures/School-02.png"
+      "position": "Pictures/School-02.png"
     },
     {
       "name": "Office",
-      "position": "pictures/Office-02.png"
+      "position": "Pictures/Office-02.png"
     },
     {
       "name": "SuperMarket",
-      "position": "pictures/Supermarket-02.png"
+      "position": "Pictures/Supermarket-02.png"
     },
     {
       "name": "B",
-      "position": "pictures/B-02.png"
+      "position": "Pictures/B-02.png"
     },
     {
       "name": "C",
-      "position": "pictures/C-02.png"
+      "position": "Pictures/C-02.png"
     },
     {
       "name": "A",
-      "position": "pictures/A-02.png"
+      "position": "Pictures/A-02.png"
     },
     {
       "name": "Hospital",
-      "position": "pictures/Hospital-02.png"
+      "position": "Pictures/Hospital-02.png"
     }
   ],
   "links": [

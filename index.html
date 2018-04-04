@@ -35,7 +35,7 @@
 			 
 			<p>Jack is an elementary school student, and he lives with his Mom, Dad, and Grandpa.  On a Tuesday morning, Jack needs to go to school as usual.  His Dad needs to go to the office for an important meeting.  His Mom is planning to go to the supermarket to buy some fresh vegetables to cook lunch.  His Grandpa has a doctor appointment in the nearby hospital.  They decide to leave the house together and share the ride.  What is the fastest way for them to arrive at their destinations and how many cars do they need at minimum?</p>
 
-            <img src="./pictures/story.png" alt="Mountain View" width="480" height="220">
+            <img src="./Pictures/story.png" alt="Mountain View" width="480" height="220">
 			 
 			<p>To solve this problem, we need to find the shortest paths between home and different destinations, and <em><!-- -->Dijkstra’s Algorithm</em> can help us find the answer.  Let’s use the directed edge-weighted graph at right as the map to solve this problem <em><!-- -->【Please play around with the graph.  You are able to drag the nodes to different places】</em>.</p>
 			
@@ -44,20 +44,20 @@
 			<p><em><!-- -->Dijkstra’s Algorithm</em> is an algorithm for finding the shortest paths between nodes in a graph (Wikipedia).  The starting node is called initial node, and the end node is called destination node.  The algorithm first marks all nodes in the graph unvisited.  Then, it picks the unvisited node with the lowest distance, calculates the distance through it to each unvisited neighbor, and updates the neighbor’s distance if smaller.  Mark visited when done with neighbors.  Finally, when the destination node has been marked visited, the algorithm stops and the shortest path is found.</p>
 
 			<p>Let's work on the problem step by step:</p>
-                <button id="start"><img src="./pictures/start.png"</button></button>
+                <button id="start"><img src="./Pictures/start.png"</button></button>
 
 			
             <h4 class="bodyhed2">Step 1</h4>
             <p>Let’s set node “Home” as our initial node and mark all nodes in the graph unvisited.</p>
             <p>As you can see through the highlighting part of the graph, “School”, “Office”, and “Supermarket” are the three unvisited neighbor nodes for “Home”.  Please calculate the distance through “Home” to each unvisited neighbor node and click on the button below to select the unvisited neighbor node with the lowest distance. <em><!-- -->【Instruction: if the correct node is selected, you will see the calculation result of the distances of the neighbor nodes in the table on the right.  If the incorrect node is selected, the button will turn red.】</em></p>
                 
-                <button id="hometoschoolM"><img src="./pictures/hometoschool.png"</button></button>
-                <button id="hometooffice"><img src="./pictures/hometooffice.png"</button></button>
-                <button id="hometosupermarket"><img src="./pictures/hometosupermarket.png"</button></button>
+                <button id="hometoschoolM"><img src="./Pictures/hometoschool.png"</button></button>
+                <button id="hometooffice"><img src="./Pictures/hometooffice.png"</button></button>
+                <button id="hometosupermarket"><img src="./Pictures/hometosupermarket.png"</button></button>
 
             <h4 class="bodyhed2">Step 2</h4>
             <p>Congratulations! Now you are at the step 2.  As you can see from the table on the right, the neighbor node “School” has the lowest distance (20) compared with “Office” (80) and “Supermarket” (90).  Let’s mark “School” visited and set it as our new current node <em><!-- -->【Please notice that the visited node and edge will never be checked again】</em>.  By looking at the highlighting part of the graph, we are able to see that “C” is the only unvisited neighbor node for “School”.  Please click on the button below to update the distance of the neighbor node in the table. </p>
-                 <button id="schooltocM"><img src="./pictures/schooltoc.png"</button></button>
+                 <button id="schooltocM"><img src="./Pictures/schooltoc.png"</button></button>
             <p>Now, the unvisited neighbor node “C” has the lowest distance (30).  Let’s mark “C” visited and set it as our new current node.</p>  
                 <li>Visited Nodes: Home, School, C</li>
                 <li>Unvisited Nodes: A, Office, B, Supermarket, Hospital</li>
@@ -65,8 +65,8 @@
 
             <h4 class="bodyhed2">Step 3</h4>
             <p>Please calculate the distance through “C” to each unvisited neighbor node and click on the button below to select the unvisited neighbor node with the lowest distance.</p>
-                <button id="ctooffice"><img src="./pictures/ctooffice.png"</button></button>
-                <button id="ctoaM"><img src="./pictures/ctoa.png"</button></button>
+                <button id="ctooffice"><img src="./Pictures/ctooffice.png"</button></button>
+                <button id="ctoaM"><img src="./Pictures/ctoa.png"</button></button>
             <p>Based on the table, we know that the neighbor node “A” has the lowest distance (40).  Let’s mark “A” visited and set it as our new current node.</p> 
                 <li>Visited Nodes: Home, School, C, A</li>
                 <li>Unvisited Nodes: Office, B, Supermarket, Hospital</li>
@@ -74,8 +74,8 @@
 
             <h4 class="bodyhed2">Step 4</h4>
             <p>Please calculate the distance through “A” to each unvisited neighbor node and click on the button below to select the unvisited neighbor node with the lowest distance.</p>
-                <button id="atohospital"><img src="./pictures/atohospital.png"</button></button>
-                <button id="atoofficeM"><img src="./pictures/atooffice.png"</button></button>
+                <button id="atohospital"><img src="./Pictures/atohospital.png"</button></button>
+                <button id="atoofficeM"><img src="./Pictures/atooffice.png"</button></button>
             <p>Based on the table, the neighbor node “Office” has the lowest distance (50).  Let’s mark “Office” visited and set it as our new current node.</p> 
                 <li>Visited Nodes: Home, School, C, A, Office</li>
                 <li>Unvisited Nodes: B, Supermarket, Hospital</li>
@@ -83,7 +83,7 @@
 
             <h4 class="bodyhed2">Step 5</h4>
             <p>Since “Supermarket” is the only unvisited neighbor node for “Office”.  Please click on the button below to update the distance of the neighbor node in the table. </p>
-                <button id="officetosupermarket"><img src="./pictures/officetosupermarket.png"</button></button>
+                <button id="officetosupermarket"><img src="./Pictures/officetosupermarket.png"</button></button>
             <p>Now, the unvisited neighbor node “Hospital” has the lowest distance (60).  Let’s mark “Hospital” visited and set it as our new current node.</p>
                 <li>Visited Nodes: Home, School, C, A, Office, Hospital</li>
                 <li>Unvisited Nodes: B, Supermarket</li>
@@ -91,7 +91,7 @@
 
             <h4 class="bodyhed2">Step 6</h4>
             <p>The node “Hospital” does not have any neighbor nodes around.  Please click on the button below to compute and update the table.</p>
-                <button id="hospitalM"><img src="./pictures/hospitalcompute.png"</button></button>
+                <button id="hospitalM"><img src="./Pictures/hospitalcompute.png"</button></button>
             <p>Now, the unvisited neighbor node “Supermarket” has the lowest distance (70).  Let’s mark “Supermarket” visited and set it as our new current node.</p> 
                 <li>Visited Nodes: Home, School, C, A, Office, Hospital, Supermarket</li>
                 <li>Unvisited Nodes: B</li>
@@ -99,7 +99,7 @@
 
             <h4 class="bodyhed2">Step 7</h4>
             <p>The node “Supermarket” does not have any neighbor nodes around.  Please click on the button below to compute and update the table.</p>
-                <button id="supermarketM"><img src="./pictures/supermarketcompute.png"</button></button>
+                <button id="supermarketM"><img src="./Pictures/supermarketcompute.png"</button></button>
             <p>The node “B” has a distance as “Infinity”, which means there is no path from “Home” to “B”</p>
 
             <h3 class="bodyhed1">Quiz</h3>
@@ -107,13 +107,13 @@
             <p>Please use the table you completed to answer the questions below.</p>
 
             <li>What is the shortest path that Jack’s Dad can take to his Office?</li>
-            <ol><button id="q1wrong"><img src="./pictures/q1wrong.png"</button></button>
-            <button id="q1correct"><img src="./pictures/q1correct.png"</button></button></ol>
+            <ol><button id="q1wrong"><img src="./Pictures/q1wrong.png"</button></button>
+            <button id="q1correct"><img src="./Pictures/q1correct.png"</button></button></ol>
 
             <li>How many cars do they need at the minimum?</li>
-            <ol><button id="onecar"><img src="./pictures/1car.png"</button></button>
-                <button id="twocars"><img src="./pictures/2cars.png"</button></button>
-                <button id="threecars"><img src="./pictures/3cars.png"</button></button></ol>
+            <ol><button id="onecar"><img src="./Pictures/1car.png"</button></button>
+                <button id="twocars"><img src="./Pictures/2cars.png"</button></button>
+                <button id="threecars"><img src="./Pictures/3cars.png"</button></button></ol>
 		</div>
 
 
